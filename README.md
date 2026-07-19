@@ -1,2 +1,222 @@
 # MFCJ-Celaya
 Grupo católico juvenil MFCJ en la iglesia de la santísima trinidad en Celaya Guanajuato de 5pm a 7pm
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo Juvenil - Santísima Trinidad</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #ffcc70, #ff8177, #40c9ff);
+      color: #333;
+    }
+    header {
+      background: #ff4b5c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 5px 0;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .highlight {
+      color: #ff4b5c;
+      font-weight: bold;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    button {
+      background: #ff4b5c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background: #ff6f61;
+    }
+
+    / Slider /
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .nav-btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Grupo Juvenil Santísima Trinidad</h1>
+    <p>Celaya, Guanajuato</p>
+    <p>👀 Visitas: <span id="contadorHeader">0</span></p>
+  </header>
+
+  <nav>
+    <a href="#actividades">Actividades</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#visitas">Visitas</a>
+  </nav>
+
+  <section id="actividades">
+    <h2>🙌 Nuestras Actividades</h2>
+    <div class="card">
+      <img src="img/grupo.jpg" alt="Grupo juvenil reunido" style="width:100%; border-radius:10px; margin-bottom:15px;">
+      <img src="img/semicirculo.jpg" alt="Grupo en formación semicircular" style="width:100%; border-radius:10px; margin-bottom:15px;">
+      <p>Nos reunimos <span class="highlight">todos los sábados de 5 a 7 PM</span>.</p>
+      <p>Un sábado compartimos <span class="highlight">temas católicos</span>, y al siguiente realizamos <span class="highlight">servicio social</span>.</p>
+      <p>También organizamos <span class="highlight">viajes, competencias y convivencias</span>.</p>
+    </div>
+  </section>
+
+  <section id="eventos">
+    <h2>⚽🏀🎶 Eventos Especiales</h2>
+    <div class="card">
+      <!-- Slider dinámico con botones -->
+      <div class="slider">
+        <div class="slides" id="slides">
+          <img src="img/basquet.jpg" alt="Competencia de basquetbol">
+          <img src="img/futbol.jpg" alt="Competencia de fútbol">
+          <img src="img/danza.jpg" alt="Presentación de danza">
+          <img src="img/grupo.jpg" alt="Grupo juvenil reunido">
+          <img src="img/bleachers.jpg" alt="Grupo en gradas">
+          <img src="img/semicirculo.jpg" alt="Grupo en formación semicircular">
+        </div>
+        <button class="nav-btn prev" onclick="moverSlide(-1)">❮</button>
+        <button class="nav-btn next" onclick="moverSlide(1)">❯</button>
+      </div>
+
+      <p>Participamos en la <span class="highlight">MFCiada 2026</span>, con competencias de:</p>
+      <ul style="list-style:none; padding:0;">
+        <li>⚽ Fútbol</li>
+        <li>🏀 Basquetbol</li>
+        <li>🏐 Voleibol</li>
+        <li>🏃 Atletismo</li>
+        <li>🎤 Canto</li>
+        <li>💃 Danza</li>
+      </ul>
+      <p>¡Todos son bienvenidos, hombres y mujeres de <span class="highlight">11 a 29 años</span>!</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>📞 Contacto</h2>
+    <div class="card">
+      <img src="img/instagram_qr.jpg" alt="Instagram QR" style="width:60%; border-radius:10px; margin-bottom:15px;">
+      <p>¿Quieres unirte? ¡Escríbenos!</p>
+      <p>Coordinadora: <strong>Nayeli</strong></p>
+      <p>Teléfono: <a href="tel:4611022029">4611022029</a></p>
+      <button onclick="window.location.href='tel:4611022029'">Llamar ahora</button>
+    </div>
+  </section>
+
+  <section id="visitas">
+    <h2>👀 Contador de visitas</h2>
+    <div class="card">
+      <p>Este sitio ha sido visitado <span id="contador">0</span> veces.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Grupo Juvenil Santísima Trinidad - Celaya, GTO</p>
+  </footer>
+
+  <script>
+    // Contador de visitas con countapi
+    async function actualizarContador() {
+      const res = await fetch('https://api.countapi.xyz/hit/grupojuvenilcelaya/visitas');
+      const data = await res.json();
+      document.getElementById('contador').innerText = data.value;
+      document.getElementById('contadorHeader').innerText = data.value;
+    }
+    actualizarContador();
+
+    // Slider manual + autoplay
+    let index = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+
+    function mostrarSlide() {
+      slides.style.transform = translateX(-${index * 100}%);
+    }
+
+    function moverSlide(n) {
+      index = (index + n + totalSlides) % totalSlides;
+      mostrarSlide();
+    }
+
+    // Auto-play cada 5 segundos
+    setInterval(() => {
+      moverSlide(1);
+    }, 5000);
+  </script>
+</body>
+</html>
