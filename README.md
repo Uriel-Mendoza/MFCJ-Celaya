@@ -1,6 +1,7 @@
 # MFCJ-Celaya
 Grupo católico juvenil MFCJ en la iglesia de la santísima trinidad en Celaya Guanajuato de 5pm a 7pm
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
